@@ -1,0 +1,155 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+import java.io.*;
+import java.util.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+public class hashcode {
+
+
+    // Java Program to illustrate reading from FileReader
+// using BufferedReader
+
+        public static void main(String[] args)throws Exception
+        {
+// We need to provide file path as the parameter:
+// double backquote is to avoid compiler interpret words
+// like \test as \t (ie. as a escape sequence)
+            File file = new File("c_medium.in");
+            int i,max=0,k=0,count=1,count1=0;
+            int[] j=new int[100];
+            int[] r=new int[100];
+
+
+
+
+
+            Dictionary geek = new Hashtable();
+            BufferedReader br = new BufferedReader(new FileReader(file));
+
+            String st;
+
+            String line = br.readLine();
+            String[] firstLine = line.split(" ");
+            int maxnum=Integer.parseInt(firstLine[0]);
+            System.out.print("max number is "+maxnum);
+            int types=Integer.parseInt(firstLine[1]);
+            System.out.print("\ntypes of pizza "+types);
+
+            String line2 = br.readLine();
+            String[] pizz = line2.split(" ");
+            int[] f =new int[100];
+            for(i=0;i<types;i++){
+
+                f[i]=Integer.parseInt(pizz[i]);
+
+            }
+            for(i=0;i<types;i++){
+
+               geek.put(i,f[i]);
+
+            }
+
+
+            for(i=0;i<types;i++) {
+                System.out.print("\n"+f[i]);
+
+            }
+            System.out.print("\n\n\n");
+
+            for(i=types-1;i>=0;i--) {
+
+                if(max+f[i]<=maxnum){
+
+                max=max+f[i];
+                j[k]=i;
+
+                k++;
+                count1=count1+1;
+
+
+                System.out.print(f[i]+"+");
+
+                }
+
+
+
+
+
+            }
+            for(i=0;i<count1;i++)
+            {
+                if(count==2){
+                    break;
+                }
+                if(f[i]==0){
+                    count1=count1+1;
+                    r[i]=j[i];
+
+                }
+                r[i]=j[i];
+
+
+
+
+            }
+
+
+            System.out.print("="+max);
+            System.out.print("\nThe max pizza is  : "+max);
+            System.out.print("\n");
+            System.out.print(geek);
+            System.out.print("\n");
+            for(i=0;i<j.length;i++)
+            {
+                System.out.print(j[i] );
+            }
+            System.out.print("\n");
+            for(i=0;i<count1;i++)
+            {
+                System.out.print(r[i] );
+            }
+
+            try {
+                System.out.println("\n------- output " + "a_example");
+                PrintWriter outputFile = new PrintWriter("output\\" + "a_example1"+ ".out", "UTF-8");
+                outputFile.println(count1);
+                System.out.println(count1);
+                for (int ee = 0; ee <count1; ee++) {
+                    outputFile.print(r[ee]+ " ");
+                    System.out.print(r[ee] + " ");
+                }
+                outputFile.close();
+            } catch (Exception e) {
+                System.err.println("" + e);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+}
+

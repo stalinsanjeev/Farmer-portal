@@ -1,0 +1,114 @@
+
+
+Neha rao : 
+
+	we have 3 data bases :
+
+				1.register
+
+					We have user information in register 
+
+				2.products 
+
+					We have product id and price in products which 						will help us in placing orders and reduce 						redundancy so we don't have to type again
+				3.orders
+
+					in orders table we collect information from the 
+					products and register table using name and pid
+					these orders table will be sent to admin to 						deliver products
+		we used mysql database and Xampp server 
+
+Sanjeev:
+
+	registration:
+			when we register it will lead us into register.java file and here
+			we create a class called member to store all values of 					registration, we create a member object and pass it into the 	
+			registerdao.java file ,there it will access the database and 
+			enter values into register table.
+			if successful it will lead us to registration success page if not 
+			it will lead us to error page
+
+	login :
+		when we login ,it will lead us into login.java file which will collect 			details and send us into logindao.java file where validation happens from 
+		Register table  and gives us acmes to homepage.jsp
+
+
+
+
+Satwika---
+	
+
+In home page we have 
+
+		1.medicines : 
+			
+			we have wide range of medicines that we deliver ,under medicines 			you have a layout that will show us the price of 
+			the medicine and the option to order it.
+			
+		2.devices  :
+
+			we also added devices as they are equally important and has a huge 			market in the industry we deliver consumer medicinal devices like 			thermometer etc.
+
+		3.ayurvedic :
+
+			we also added Ayurvedic as they can heal certain illnesses and the 
+			the Ayurvedic market is huge and well trusted in the masses.
+
+	--ordering--
+
+
+      {	ordercrocin.jsp-->order validation (order.java-->orderdao.java)-->success.jsp }
+
+		so lets order Crocin ,if we click on order it will take us into 			ordericrocin.jsp where we can see the details of the product and the 			price ,we have to give our username ,the quantity we have to purchase and 		the shipping address.
+
+		the order validation will take place in order.java and orderdao.java where
+		it will take the details and insert it into the table using sql queries.
+
+		if it is sucesss then it will take us to success page.
+
+
+	
+
+
+Dhanishwi
+	
+
+	{ main.jsp-->adminlog.jsp(admin.java)-->adminpage.jsp }
+
+	we have admin module :
+
+	to access admin we have to go to main.jsp page and from there when we click on 
+	admin It will take us to adminlog.jsp page here we have to give our details and 
+	login we are not keeping database cause admin is only one member.
+	
+	the authentication will happen in admin.java and if credentials are correct it 
+	will take us to adminpage.jsp there the admin can see the details of orders 
+	and products and the admin will go n to deliver these products
+
+	main.jsp-->adminlog.jsp(admin.java)-->adminpage.jsp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
