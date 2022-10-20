@@ -5,3 +5,4 @@ Farmer portal is a system that provides the farmers an interface to sell their p
 
 
 ![alt text](loginpage.png)
+![alt text](states.png)
