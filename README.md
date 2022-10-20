@@ -20,6 +20,7 @@ Software used:
 PHP
 HTML
 XAMP
+
 Database used:
 mySQL
 
